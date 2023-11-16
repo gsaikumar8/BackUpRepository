@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'SpringAngularAuth'`, () => {
+  it(`should have as title 'SpringAngularCrud'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('SpringAngularAuth');
+    expect(app.title).toEqual('SpringAngularCrud');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('SpringAngularAuth app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('SpringAngularCrud app is running!');
   });
 });

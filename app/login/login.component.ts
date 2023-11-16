@@ -1,6 +1,5 @@
-import { Component,OnInit } from '@angular/core';
-import { RestapiService } from '../restapi.service';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ProductServiceService } from '../product-service.service';
 
 @Component({
   selector: 'app-login',
@@ -13,16 +12,13 @@ export class LoginComponent implements OnInit{
   password:string="";
   msg:any;
 
-  constructor(private service:RestapiService,private router:Router){}
+  constructor(private product:ProductServiceService){}
 
   ngOnInit(): void {
     
   }
 
   doLogin(){
-    this.service.login(this.username,this.password).subscribe(data=>{
-      this.router.navigate(['home']);
-    });
+    return this.product.login(this.username,this.password).subscribe(data=>{console.log(data)});
   }
-
 }

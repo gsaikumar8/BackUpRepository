@@ -1,0 +1,11 @@
+form{
+    border: 2px solid black;
+    width: 20%;
+    height: 250px;
+    margin-left: 40%;
+    margin-top: 10px;
+    padding: 20px;
+}
+input{
+    display:table-row ;
+}

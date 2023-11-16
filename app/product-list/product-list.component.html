@@ -1,0 +1,19 @@
+
+<table class="table table-striped">
+    <tr class="table-sub">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Activity</th>
+    </tr>
+    <tr *ngFor="let obj of productList">
+        <td>{{obj.id}}</td>
+        <td>{{obj.name}}</td>
+        <td>{{obj.price}}</td>
+        <td>
+            <button (click)="getById(obj.id)">Update</button>
+            <button (click)="delete(obj.id)">Delete</button>
+        </td>
+    </tr>
+  </table>
+
